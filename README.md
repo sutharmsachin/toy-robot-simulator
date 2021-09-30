@@ -12,7 +12,7 @@ Screenshots
 
 Here is a screenshot of the lovely home.
 
-![Home Screenshot](https://github.com/sutharmsachin/toy-robot-simulator/screenshot.png)
+![Home Screenshot](https://raw.githubusercontent.com/sutharmsachin/toy-robot-simulator/main/screenshot.png)
 
  
  
