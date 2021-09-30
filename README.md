@@ -17,6 +17,7 @@ Here is a screenshot of the Simulator home.
 Here is a screenshot of the Simulator test cases.
 
 
+![Home Screenshot](https://raw.githubusercontent.com/sutharmsachin/toy-robot-simulator/main/test_case.png)
 ![Home Screenshot](https://raw.githubusercontent.com/sutharmsachin/toy-robot-simulator/main/test_case2.png)
 
  
