@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tony Robot</title>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Ionic App</title>
+    <base href="/" />
 
-  <base href="/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
-  <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+  
+  </head>
 
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-</head>
-
-<body>
-  <app-root></app-root>
-</body>
-
+  <body>
+    <app-root></app-root>
+  </body>
+  <script>
+         //   console output override
+         window.console = {
+             log: function(str){
+                 const logWindow = document.querySelector('.log');
+                 const element = document.createElement('p');
+                 if (/(invalid)/gi.test(str)) {
+                     element.setAttribute('style', 'color: rgb(250,100,100)');
+                 }
+                 element.appendChild(document.createTextNode(str));
+                 if (logWindow.childNodes.length === 0) {
+                     logWindow.appendChild(element);
+                 } else {
+                     logWindow.insertBefore(element, logWindow.childNodes[0]);
+                 }
+             },
+             info: window.console.info,
+             warn: window.console.warn,
+             error: window.console.error
+         };
+   </script>
 </html>

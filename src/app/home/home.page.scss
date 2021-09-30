@@ -1,27 +1,161 @@
-#container {
-  text-align: center;
+.item-select,.ion-group-box{
+    width: 320px;
+    border: 1px solid #eee;
+    margin-top: 1.5em;
+    border-radius: 1em;
+    margin-right: 1.5em;
+}
+ 
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-item-divider{
+    padding-bottom: 10px;
+}
+.main-controls {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.controls {
+    margin: 0px auto;
+    text-align: center;
+    font-size: 1em;
+    font-family: sans-serif;
+  }
+
+  button,
+  input[type="button"] {
+    font-size: 1em;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    padding: 0.5em;
+    min-height: 1.8em;
+    margin-left: 1em;
+    min-width: 3em;
+    margin-top: 1em;
+  
+  }
+
+  label {
+    margin-left: 30px;
+  }
+
+  select {
+    margin: 0 1em;
+    font-size: 1em;
+    height: 30px;
+    width: 200px;
+  }
+
+ 
+  #container {
+    position: relative;
+   
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  
+  }
+  .log{
+    width: 500px;
+    overflow-y: auto;
+    height: 500px;
+    
+    border: 1px solid #000;
+   
+  }
+
+  #reportLog {
+    text-align: center;
+  }
+
+  #table {
+   
+    background-image: -moz-linear-gradient(
+        45deg,
+        var(--ion-color-primary) 25%,
+        transparent 25%,
+        transparent 75%,
+        var(--ion-color-primary) 75%,
+        var(--ion-color-primary) 100%
+      ),
+      -moz-linear-gradient(45deg, var(--ion-color-primary) 25%, transparent 25%, transparent
+            75%, var(--ion-color-primary) 75%, var(--ion-color-primary) 100%);
+    background-image: -webkit-linear-gradient(
+        45deg,
+        var(--ion-color-primary) 25%,
+        transparent 25%,
+        transparent 75%,
+        var(--ion-color-primary) 75%,
+        var(--ion-color-primary) 100%
+      ),
+      -webkit-linear-gradient(45deg, var(--ion-color-primary) 25%, transparent 25%, transparent
+            75%, var(--ion-color-primary) 75%, var(--ion-color-primary) 100%);
+    -moz-background-size: 200px 200px;
+    background-size: 200px 200px;
+    -webkit-background-size: 200px 200px;
+    background-position: 0 0, 100px 100px;
+    border: 1px solid var(--ion-color-primary);
+    border-radius: 4px;
+    
+  }
+
+   
+
+
+  
+  .table {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid grey;
+    position: relative;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.robot {
+    display: none;
+    position: absolute;
+    width: 18%;
+    height: 4%;
+    padding: 40px 5px;
+    text-align: center;
+    // background-color:  var(--ion-color-primary);
+    background: url("/assets/robot.png");
+    width: 18%;
+    height: 4%;
+    background-size: cover !important;
+    transition: bottom 0.3s ease-in-out,
+                left 0.3s ease-in-out;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.robot::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    
+   
 }
 
-#container a {
-  text-decoration: none;
+.placed {
+    display: block !important;
 }
+
+.robot[data-direction="north"] {
+    transform: rotate(0deg);
+}
+
+.robot[data-direction="south"] {
+    transform: rotate(180deg);
+}
+
+.robot[data-direction="east"] {
+    transform: rotate(90deg);
+}
+
+.robot[data-direction="west"] {
+    transform: rotate(270deg);
+}
+ 
