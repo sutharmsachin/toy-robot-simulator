@@ -1,0 +1,7 @@
+{
+  "name": "TonyRobot",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
