@@ -10,9 +10,14 @@ This application was for the Toy Robot Simulator for code challenge.
 Screenshots
 -----------
 
-Here is a screenshot of the lovely home.
+Here is a screenshot of the Simulator home.
 
 ![Home Screenshot](https://raw.githubusercontent.com/sutharmsachin/toy-robot-simulator/main/screenshot.png)
+
+Here is a screenshot of the Simulator test cases.
+
+
+![Home Screenshot](https://raw.githubusercontent.com/sutharmsachin/toy-robot-simulator/main/test_case2.png)
 
  
  

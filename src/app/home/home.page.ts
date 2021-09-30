@@ -39,9 +39,14 @@ export class HomePage   implements OnInit {
         } else {
             robotElement.classList.remove('placed');
         }
-        robotElement.setAttribute('data-direction', that.facing.toLowerCase());
-        robotElement.setAttribute('style', `bottom: ${that.y * 20}%; left: ${that.x * 20}%`);
-  }
+       
+        if(that.facing !==undefined){
+          robotElement.setAttribute('data-direction', that.facing.toLowerCase());
+          robotElement.setAttribute('style', `bottom: ${that.y * 20}%; left: ${that.x * 20}%`);
+  
+        }
+
+   }
   placeRobot(){
     this.robot.place(parseInt(this.x), parseInt(this.y), this.facing,this.renderCallback) 
   }
